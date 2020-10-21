@@ -1,0 +1,21 @@
+.navigation {
+  position: fixed;
+  bottom: 0;
+  background-color: #efefef;
+  border-top: 1px solid #ccc;
+}
+.navigation ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+}
+.navigation li {
+  padding: 1em 1em;
+  width: 20%;
+  text-align: center;
+  border-right: 1px solid #ccc;
+}
+.navigation li:last-child {
+  border-right: none;
+}

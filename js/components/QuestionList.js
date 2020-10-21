@@ -1,16 +1,39 @@
 import createElement from "../../ui-framework/main";
-import QuestionButton from "./QuestionButton";
+// import QuestionButton from "./QuestionButton";
+import "../../css/components/questionlist.css";
 
 export default function QuestionList() {
-  const element = createElement("section", "", document.body);
-  const divBookmark = createElement("div", "B", element);
-  const h2Title = createElement("h2", "Question:", element);
-  const paragraph = createElement("p", "Lorem ipsum", element);
-  // element.appendChild(QuestionButton());
-  const questionList = createElement("ul", "", element);
+  const questionList = createElement(
+    "ul",
+    "",
+    document.body,
+    "question-card-list"
+  );
+  const questionListItem = createElement(
+    "li",
+    "",
+    questionList,
+    "question-card"
+  );
+  const bookmark = createElement("div", "B", questionListItem);
+  const h2Title = createElement("h2", "Question:", questionListItem);
+  const question = createElement("p", "What do you think?", questionListItem);
+  const answer = createElement("p", "Not much", questionListItem, "hidden");
+  const toggleAnswer = createElement("button", "show answer", questionListItem);
+  const questionTagList = createElement(
+    "ul",
+    "",
+    questionListItem,
+    "question-card__tags"
+  );
 
-  const questionListItems = ["Tag w", "Tag x", "Tag y", "Tag z"];
-  questionListItems.forEach((tagText) => {
-    const questionListItem = createElement("li", tagText, questionList);
+  const questionTags = ["Tag w", "Tag x", "Tag y", "Tag z"];
+  questionTags.forEach((tagText) => {
+    const questionTag = createElement(
+      "li",
+      tagText,
+      questionTagList,
+      "question-card__tag"
+    );
   });
 }
