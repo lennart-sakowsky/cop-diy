@@ -3,10 +3,15 @@ import createElement from "../../ui-framework/main";
 import "../../css/components/questionlist.css";
 
 export default function QuestionList() {
+  question();
+  question();
+}
+
+function question() {
   const questionList = createElement(
     "ul",
     "",
-    document.body,
+    document.body.querySelector("main"),
     "question-card-list"
   );
   const questionListItem = createElement(
