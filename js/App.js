@@ -3,7 +3,9 @@ import Nav from "./components/Nav";
 
 export default function App() {
   const headerComponent = Header();
-  Nav(function whenClicked(text) {
-    headerComponent.update(text);
-  });
+  Nav(headerComponent.update);
 }
+
+/* In Short-Arrow-Form
+Nav((text) => headerComponent.update(text));
+ */

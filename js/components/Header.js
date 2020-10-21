@@ -1,10 +1,12 @@
 import createElement from "../../ui-framework/main";
 
 export default function Header() {
-  const header = createElement("header", "", document.body);
-  const headline = createElement("h1", "Dashboard", header);
+  const element = createElement("header", "", document.body);
+  const headline = createElement("h1", "Dashboard", element);
 
-  return {
-    update: (title) => (headline.textContent = title),
-  };
+  return { element, update };
+
+  function update(title) {
+    headline.textContent = title;
+  }
 }
