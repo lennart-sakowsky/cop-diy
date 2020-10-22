@@ -1,5 +1,6 @@
 import createElement from "../../ui-framework/main";
 import "../../css/components/profile.css";
+import "../../css/components/global.css";
 
 export default function () {
   const profile = createElement(

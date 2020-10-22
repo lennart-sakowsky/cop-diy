@@ -8,8 +8,8 @@ import Profile from "./components/Profile";
 export default function App() {
   const headerComponent = Header();
   Main();
-  QuestionList();
-  // QuestionButton();
+  const questionComponent = QuestionList();
+  QuestionButton(questionComponent.showAnswer);
   Profile();
   Nav(headerComponent.update);
 }

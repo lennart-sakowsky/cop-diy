@@ -1,13 +1,8 @@
 import createElement from "../../ui-framework/main";
-// import QuestionButton from "./QuestionButton";
+//import QuestionButton from "./QuestionButton";
 import "../../css/components/questionlist.css";
 
 export default function QuestionList() {
-  question();
-  question();
-}
-
-function question() {
   const questionList = createElement(
     "ul",
     "",
@@ -24,7 +19,7 @@ function question() {
   const h2Title = createElement("h2", "Question:", questionListItem);
   const question = createElement("p", "What do you think?", questionListItem);
   const answer = createElement("p", "Not much", questionListItem, "hidden");
-  const toggleAnswer = createElement("button", "show answer", questionListItem);
+  //QuestionButton();
   const questionTagList = createElement(
     "ul",
     "",
@@ -41,4 +36,10 @@ function question() {
       "question-card__tag"
     );
   });
+
+  return { showAnswer };
+
+  function showAnswer(className) {
+    answer.className = className;
+  }
 }
